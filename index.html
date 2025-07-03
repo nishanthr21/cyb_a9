@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Submission</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #9b59b6, #e91e63, #8bc34a);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      background: #8bc34a;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" id="userInput" placeholder="Enter something..." required />
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const input = document.getElementById("userInput").value;
+
+      fetch("https://webhook.site/b5bf74ca-3329-4bae-a93d-bca32323c1b0", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ userInput: input })
+      })
+      .then(() => {
+        alert("Submitted successfully!");
+        document.getElementById("userInput").value = ""; // Clear input
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        alert("Failed to submit.");
+      });
+    });
+  </script>
+</body>
+</html>
