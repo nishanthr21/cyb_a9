@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Simple Formspree Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Input Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4338ca;
+    }
+  </style>
 </head>
 <body>
-  <h2>Submit Form</h2>
-  <form action="https://formspree.io/f/movwbnqk" method="POST">
-    <input type="text" name="message" placeholder="Enter something..." required />
-    <button type="submit">Send</button>
-  </form>
+  <div class="container">
+    <h1>Submit Your Input</h1>
+    <form action="https://formspree.io/f/mzzgwazv" method="POST">
+      <input type="text" name="userInput" placeholder="Enter something..." required>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </body>
 </html>
