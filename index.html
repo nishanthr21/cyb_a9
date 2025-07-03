@@ -2,56 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Input Submission Form</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #9b59b6, #e91e63, #8bc34a);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    input[type="text"] {
-      width: 250px;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #8bc34a;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #7cb342;
-    }
-  </style>
+  <title>Simple Formspree Test</title>
 </head>
 <body>
-
+  <h2>Submit Form</h2>
   <form action="https://formspree.io/f/movwbnqk" method="POST">
     <input type="text" name="message" placeholder="Enter something..." required />
-    <br>
-    <button type="submit">Submit</button>
+    <button type="submit">Send</button>
   </form>
-
 </body>
 </html>
